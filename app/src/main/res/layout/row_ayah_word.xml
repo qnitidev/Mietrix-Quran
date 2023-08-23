@@ -18,6 +18,7 @@
         android:id="@+id/arabic_textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/mushaf_restu"
         android:lineSpacingExtra="@dimen/lineSpacingExtra"
         android:padding="@dimen/textViewPadding"
         android:visibility="gone"></TextView>

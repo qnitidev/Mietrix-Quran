@@ -38,9 +38,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-
             android:lineSpacingExtra="@dimen/lineSpacingExtra"
             android:padding="@dimen/textViewPadding"
+            android:fontFamily="@font/mushaf_restu"
             android:text="@string/bismillah"
             android:textSize="@dimen/fontSizeArabicHeader">
 

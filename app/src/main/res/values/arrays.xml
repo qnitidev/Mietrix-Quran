@@ -21,6 +21,7 @@
         <!--   <item>Mushaf Restu</item>
            <item>Uthmani New</item> -->
         <item>Mushaf Restu 16/8/2023</item>
+        <item>Amiri Regular</item>
     </string-array>
 
     <string-array name="arabic_font_code">
@@ -32,6 +33,7 @@
         <!-- <item>Restu.ttf</item>
            <item>Uthmani_new.otf</item>-->
         <item>MushafRestu_Regular.ttf</item>
+        <item>Amiri_Regular.ttf</item>
     </string-array>
 
     <string-array name="arabic_font_sizes">

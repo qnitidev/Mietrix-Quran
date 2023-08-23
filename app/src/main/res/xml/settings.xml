@@ -21,13 +21,13 @@
 
     <PreferenceCategory android:title="@string/appearance">
 
-        <ListPreference
+      <!--  <ListPreference
             android:defaultValue="PDMS_IslamicFont.ttf"
             android:entries="@array/arabic_font"
             android:entryValues="@array/arabic_font_code"
             android:key="arabicFont"
 
-            android:title="@string/arabic_font" />
+            android:title="@string/arabic_font" /> -->
 
         <ListPreference
             android:defaultValue="34"

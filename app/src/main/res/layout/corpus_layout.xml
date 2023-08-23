@@ -18,6 +18,7 @@
         <TextView
             android:id="@+id/corpus_word_arabic_textView"
             android:layout_width="wrap_content"
+            android:fontFamily="@font/mushaf_restu"
             android:layout_height="wrap_content">
 
         </TextView>
@@ -25,6 +26,7 @@
         <TextView
             android:id="@+id/corpus_word_trans_textView"
             android:layout_width="wrap_content"
+            android:fontFamily="@font/mushaf_restu"
             android:layout_height="wrap_content">
 
         </TextView>
@@ -56,11 +58,13 @@
                 android:id="@+id/arabic1TextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/mushaf_restu"
                 android:textSize="@dimen/fontSizeArabic" />
 
             <TextView
                 android:id="@+id/arabic1TypeTextView"
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/mushaf_restu"
                 android:layout_height="wrap_content">
 
             </TextView>
@@ -79,11 +83,13 @@
                 android:id="@+id/arabic2TextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/mushaf_restu"
                 android:textSize="@dimen/fontSizeArabic" />
 
             <TextView
                 android:id="@+id/arabic2TypeTextView"
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/mushaf_restu"
                 android:layout_height="wrap_content">
 
             </TextView>
@@ -100,12 +106,14 @@
             <TextView
                 android:id="@+id/arabic3TextView"
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/mushaf_restu"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/fontSizeArabic" />
 
             <TextView
                 android:id="@+id/arabic3TypeTextView"
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/mushaf_restu"
                 android:layout_height="wrap_content">
 
             </TextView>
@@ -122,12 +130,14 @@
             <TextView
                 android:id="@+id/arabic4TextView"
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/mushaf_restu"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/fontSizeArabic" />
 
             <TextView
                 android:id="@+id/arabic4TypeTextView"
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/mushaf_restu"
                 android:layout_height="wrap_content">
 
             </TextView>
@@ -145,11 +155,13 @@
                 android:id="@+id/arabic5TextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/mushaf_restu"
                 android:textSize="@dimen/fontSizeArabic" />
 
             <TextView
                 android:id="@+id/arabic5TypeTextView"
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/mushaf_restu"
                 android:layout_height="wrap_content">
 
             </TextView>
@@ -180,6 +192,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/fontSizeArabic"
+            android:fontFamily="@font/mushaf_restu"
             android:visibility="gone" />
 
         <TextView
@@ -187,6 +200,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/rootWord"
+            android:fontFamily="@font/mushaf_restu"
             android:visibility="gone">
 
         </TextView>

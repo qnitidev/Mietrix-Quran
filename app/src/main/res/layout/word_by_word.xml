@@ -11,6 +11,7 @@
     <TextView
         android:id="@+id/word_arabic_textView"
         android:layout_width="wrap_content"
+        android:fontFamily="@font/mushaf_restu"
         android:layout_height="wrap_content"></TextView>
 
     <TextView

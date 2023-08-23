@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Word By Word Quran</string>
+    <string name="app_name">Demo Quran Mushaf Restu</string>
     <string name="title_activity_settings">Settings</string>
     <string name="title_about">About</string>
 
@@ -32,7 +32,7 @@
     <string name="copy">Copy</string>
     <string name="share">Share</string>
 
-    <string name="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</string>
-    <string name="title_activity_test">TestActivity</string>
+    <string name="bismillah" translatable="false">بِسۡمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</string>
+    <string name="title_activity_test" translatable="false">TestActivity</string>
 
 </resources>

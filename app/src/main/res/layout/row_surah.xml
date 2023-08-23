@@ -40,6 +40,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerInParent="true"
+        android:fontFamily="@font/mushaf_restu"
         android:background="?android:attr/selectableItemBackground"
         android:gravity="center"
         android:minHeight="?android:attr/listPreferredItemHeightSmall"
