@@ -31,7 +31,7 @@ public class Config {
   public static final boolean defaultShowTranslation = true;
   public static final boolean defaultWordByWord = true;
   public static final boolean defaultKeepScreenOn = true;
-  public static final String defaultArabicFont = "PDMS_IslamicFont.ttf";
+  public static final String defaultArabicFont = "mushafrestu_regular.ttf";
   public static final String defaultFontSizeArabic = "30";
   public static final String defaultFontSizeTranslation = "14";
 
