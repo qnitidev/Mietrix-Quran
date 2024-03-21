@@ -11,6 +11,7 @@ public class Word {
   private String translateEn;
   private String translateBn;
   private String translateIndo;
+  private String translateMalay;
 
   public long getId() {
     return id;
@@ -82,5 +83,13 @@ public class Word {
 
   public void setTranslateIndo(String translateIndo) {
     this.translateIndo = translateIndo;
+  }
+
+  public String getTranslateMalay() {
+    return translateMalay;
+  }
+
+  public void setTranslateMalay(String translateMalay) {
+    this.translateMalay = translateMalay;
   }
 }

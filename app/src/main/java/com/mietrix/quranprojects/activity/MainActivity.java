@@ -159,6 +159,19 @@ public class MainActivity extends AppCompatActivity {
                     .replace(R.id.main_container, SurahFragment.newInstance())
                     .commit();
                 break;
+              case 3:
+                SharedPreferences.Editor ed4 = sharedPreferences.edit();
+                ed4.clear();
+                ed4.putString(Config.LANG, Config.LANG_MALAY);
+                ed4.apply();
+                setLocaleEnglish();
+                // recreate();
+                FragmentManager fragmentManager4 = getFragmentManager();
+                fragmentManager4
+                        .beginTransaction()
+                        .replace(R.id.main_container, SurahFragment.newInstance())
+                        .commit();
+                break;
             }
           }
         });

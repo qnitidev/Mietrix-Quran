@@ -18,6 +18,7 @@ public class Config {
   public static final String LANG_BN = "bn";
   public static final String LANG_EN = "en";
   public static final String LANG_INDO = "indo";
+  public static final String LANG_MALAY = "malay";
   public static final String SHOW_TRANSLATION = "showTranslation";
   public static final String WORD_BY_WORD = "wordByWord";
   public static final String KEEP_SCREEN_ON = "keepScreenOn";

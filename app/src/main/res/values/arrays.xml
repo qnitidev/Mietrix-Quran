@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="lang_names">
-        <item>বাংলা</item>
+      <!--  <item>বাংলা</item> -->
         <item>English</item>
         <item>Indonesian</item>
+        <item>Malaysian</item>
     </string-array>
 
     <string-array name="lang_codes">
-        <item>bn</item>
-        <item>en</item>
-        <item>indo</item>
-    </string-array>
+        <!--  <item>bn</item> -->
+          <item>en</item>
+          <item>indo</item>
+          <item>malay</item>
+      </string-array>
 
-    <string-array name="arabic_font">
-        <item>Amiri</item>
-        <item>Me Quran</item>
-        <item>PDMS Islamic</item>
-        <item>PDMS Quran</item>
-        <item>Uthmani</item>
-        <!--   <item>Mushaf Restu</item>
-           <item>Uthmani New</item> -->
+      <string-array name="arabic_font">
+          <item>Amiri</item>
+          <item>Me Quran</item>
+          <item>PDMS Islamic</item>
+          <item>PDMS Quran</item>
+          <item>Uthmani</item>
+          <!--   <item>Mushaf Restu</item>
+             <item>Uthmani New</item> -->
         <item>Mushaf Restu 16/8/2023</item>
         <item>Amiri Regular</item>
     </string-array>

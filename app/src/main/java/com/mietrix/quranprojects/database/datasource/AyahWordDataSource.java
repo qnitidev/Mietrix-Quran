@@ -20,6 +20,7 @@ public class AyahWordDataSource {
   public static final String AYAHWORD_WORDS_TRANSLATE_EN = "translate_en";
   public static final String AYAHWORD_WORDS_TRANSLATE_BN = "translate_bn";
   public static final String AYAHWORD_WORDS_TRANSLATE_INDO = "translate_indo";
+  public static final String AYAHWORD_WORDS_TRANSLATE_MALAY = "translate_malay";
   public static final String AYAHWORD_ID = "_id";
   public static final String AYAHWORD_ID_TAG = "ayah_word_id";
   public static final String AYAHWORD_SURAH_ID = "surah_id";
@@ -35,6 +36,7 @@ public class AyahWordDataSource {
   public static final String QURAN_ENGLSIH = "english";
   public static final String QURAN_BANGLA = "bangla";
   private static final String QURAN_INDO = "indo";
+  private static final String QURAN_MALAY = "Melayu";
   private static final String QURAN_VERSE_ID = "verse_id";
   private static final String QURAN_ARABIC = "arabic";
 
@@ -242,6 +244,75 @@ public class AyahWordDataSource {
         ayahWord.setQuranVerseId(quranCursor.getLong(quranCursor.getColumnIndex(QURAN_VERSE_ID)));
         ayahWord.setQuranArabic(quranCursor.getString(quranCursor.getColumnIndex(QURAN_ARABIC)));
         ayahWord.setQuranTranslate(quranCursor.getString(quranCursor.getColumnIndex(QURAN_INDO)));
+
+        quranCursor.moveToNext();
+      }
+
+      ayahWord.setWord(wordArrayList);
+      ayahWordArrayList.add(ayahWord);
+    }
+    quranCursor.close();
+    cursor.close();
+    db.close();
+    return ayahWordArrayList;
+  }
+
+  public ArrayList<AyahWord> getMalaysianAyahWordsBySurah(long surah_id, long ayah_number) {
+
+    long tempVerseWord;
+    long tempVerseQuran;
+
+    ArrayList<AyahWord> ayahWordArrayList = new ArrayList<AyahWord>();
+    SQLiteDatabase db = databaseHelper.getReadableDatabase();
+    cursor =
+            db.rawQuery(
+                    "SELECT bywords._id,bywords.surah_id,bywords.verse_id,bywords.words_id,bywords.words_ar,bywords.translate_malay FROM bywords where bywords.surah_id =  "
+                            + surah_id,
+                    null);
+    cursor.moveToFirst();
+
+    quranCursor =
+            db.rawQuery(
+                    "SELECT quran.verse_id,quran.arabic,quran.Melayu from quran WHERE quran.surah_id = "
+                            + surah_id,
+                    null);
+    quranCursor.moveToFirst();
+
+    for (long i = 1; i <= ayah_number; i++) {
+      tempVerseWord = i;
+      tempVerseQuran = i;
+
+      AyahWord ayahWord = new AyahWord();
+      ArrayList<Word> wordArrayList = new ArrayList<Word>();
+
+      while (i == tempVerseWord && !cursor.isAfterLast()) {
+
+        tempVerseWord = cursor.getLong(cursor.getColumnIndex(AYAHWORD_VERSE_ID));
+        if (tempVerseWord != i) {
+          continue;
+        }
+        Word word = new Word();
+        // word.setAyahWord_id(cursor.getLong(cursor.getColumnIndex(AYAHWORD_ID)));
+        // word.setAyahWord_surah_id(cursor.getLong(cursor.getColumnIndex(AYAHWORD_SURAH_ID)));
+        word.setVerseId(cursor.getLong(cursor.getColumnIndex(AYAHWORD_VERSE_ID)));
+        word.setWordsId(cursor.getLong(cursor.getColumnIndex(AYAHWORD_WORDS_ID)));
+        word.setWordsAr(cursor.getString(cursor.getColumnIndex(AYAHWORD_WORDS_AR)));
+        word.setTranslate(cursor.getString(cursor.getColumnIndex(AYAHWORD_WORDS_TRANSLATE_MALAY)));
+
+        // Log.d("AyahWordDataSource", "currentAyah: " + tempVerseId + " " +
+        // cursor.getString(cursor.getColumnIndex(AYAHWORD_WORDS_TRANSLATE_EN)));
+        wordArrayList.add(word);
+        cursor.moveToNext();
+      }
+      while (i == tempVerseQuran && !quranCursor.isAfterLast()) {
+
+        tempVerseQuran = quranCursor.getLong(quranCursor.getColumnIndex(QURAN_VERSE_ID));
+        if (tempVerseQuran != i) {
+          continue;
+        }
+        ayahWord.setQuranVerseId(quranCursor.getLong(quranCursor.getColumnIndex(QURAN_VERSE_ID)));
+        ayahWord.setQuranArabic(quranCursor.getString(quranCursor.getColumnIndex(QURAN_ARABIC)));
+        ayahWord.setQuranTranslate(quranCursor.getString(quranCursor.getColumnIndex(QURAN_MALAY)));
 
         quranCursor.moveToNext();
       }

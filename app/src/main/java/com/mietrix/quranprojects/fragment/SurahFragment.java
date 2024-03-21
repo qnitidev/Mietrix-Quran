@@ -107,6 +107,9 @@ public class SurahFragment extends Fragment {
       case Config.LANG_INDO:
         surahArrayList = surahDataSource.getIndonesianSurahArrayList();
         break;
+      case Config.LANG_MALAY:
+        surahArrayList = surahDataSource.getMalaysianSurahArrayList();
+        break;
       case Config.LANG_EN:
         surahArrayList = surahDataSource.getEnglishSurahArrayList();
         break;

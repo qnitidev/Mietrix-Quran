@@ -107,6 +107,9 @@ public class AyahWordFragment extends Fragment {
       case Config.LANG_INDO:
         ayahWordArrayList = ayahWordDataSource.getIndonesianAyahWordsBySurah(surah_id, ayah_number);
         break;
+      case Config.LANG_MALAY:
+        ayahWordArrayList = ayahWordDataSource.getMalaysianAyahWordsBySurah(surah_id, ayah_number);
+        break;
       case Config.LANG_EN:
         ayahWordArrayList = ayahWordDataSource.getEnglishAyahWordsBySurah(surah_id, ayah_number);
         break;
