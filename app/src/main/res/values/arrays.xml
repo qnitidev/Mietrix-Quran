@@ -112,4 +112,103 @@
 
     </string-array>
 
+    <string-array name="corpus_word_type_malay">
+        <item>Partikel Akusatif</item>
+        <item>Sifat</item>
+        <item>Partikel Pindaan</item>
+        <item>Partikel Jawapan</item>
+        <item>Partikel Tidak Suka</item>
+        <item>Partikel Sebab</item>
+        <item>Partikel Kepercayaan</item>
+        <item>Partikel Keadaan</item>
+        <item>Partikel Komitatif</item>
+        <item>Partikel Syarat</item>
+        <item>Konjungsi Koordinatif</item>
+        <item>Pronom Demonstratif</item>
+        <item>Penentu</item>
+        <item>Imbuh iaam Penekanan</item>
+        <item>Partikel Penyamaan</item>
+        <item>Partikel Ajakan</item>
+        <item>Partikel Penjelasan</item>
+        <item>Partikel Kecuali</item>
+        <item>Partikel Masa Depan</item>
+        <item>Partikel Perintah</item>
+        <item>Imbuh iaam Imperatif</item>
+        <item>Imbuh iaam Permulaan</item>
+        <item>Pengawalan Al-Quran</item>
+        <item>Partikel Interpretasi</item>
+        <item>Partikel Soalan</item>
+        <item>Kata Keterangan Lokasi</item>
+        <item>Isim</item>
+        <item>Pronom Negatif</item>
+        <item>Preposisi</item>
+        <item>Isim Khas</item>
+        <item>Partikel Pencegahan</item>
+        <item>Partikel Larangan</item>
+        <item>Pronom Peribadi</item>
+        <item>Imbuh iaam Tujuan</item>
+        <item>Pronom Relatif</item>
+        <item>Partikel Penyambungan</item>
+        <item>Pembatasan</item>
+        <item>Partikel Penarikan Semula</item>
+        <item>Partikel Hasil</item>
+        <item>Konjungsi Subordinatif</item>
+        <item>Partikel Tambahan</item>
+        <item>Partikel Kejutan</item>
+        <item>Kata Keterangan Masa</item>
+        <item>Verba</item>
+        <item>Partikel Vokatif</item>
+    </string-array>
+
+
+    <string-array name="corpus_word_type_indo">
+        <item>Partikel Akusatif</item>
+        <item>Sifat</item>
+        <item>Partikel Pindaan</item>
+        <item>Partikel Jawapan</item>
+        <item>Partikel Aversion</item>
+        <item>Partikel Sebab</item>
+        <item>Partikel Kepastian</item>
+        <item>Partikel Keadaan</item>
+        <item>Partikel Komitatif</item>
+        <item>Partikel Syarat</item>
+        <item>Konjungsi Koordinatif</item>
+        <item>Pronom Demonstratif</item>
+        <item>Penentu</item>
+        <item>Imbuh iaam Emfatik</item>
+        <item>Partikel Penyamaran</item>
+        <item>Partikel Seruan</item>
+        <item>Partikel Penjelasan</item>
+        <item>Partikel Kecuali</item>
+        <item>Partikel Masa Depan</item>
+        <item>Partikel Perintah</item>
+        <item>Imbuh iaam Imperatif</item>
+        <item>Partikel Perintah Awal</item>
+        <item>Pernyataan Al-Quran</item>
+        <item>Partikel Interpretasi</item>
+        <item>Partikel Pertanyaan</item>
+        <item>Kata Keterangan Tempat</item>
+        <item>Isim</item>
+        <item>Pronom Negatif</item>
+        <item>Preposisi</item>
+        <item>Isim Khas</item>
+        <item>Partikel Pencegahan</item>
+        <item>Partikel Larangan</item>
+        <item>Pronom Peribadi</item>
+        <item>Imbuh iaam Tujuan</item>
+        <item>Pronom Relatif</item>
+        <item>Partikel Pelanjutan</item>
+        <item>Pembatasan</item>
+        <item>Partikel Penarikan Balik</item>
+        <item>Partikel Hasil</item>
+        <item>Konjungsi Subordinatif</item>
+        <item>Partikel Tambahan</item>
+        <item>Partikel Kejutan</item>
+        <item>Kata Keterangan Masa</item>
+        <item>Verba</item>
+        <item>Partikel Vokatif</item>
+    </string-array>
+
+
+
 </resources>

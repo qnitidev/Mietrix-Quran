@@ -29,6 +29,15 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        debug {
+            applicationVariants.all { variant ->
+                variant.outputs.all {
+                    def date = new Date()
+                    def formattedDate = date.format('ddMMyyyy_HHmm')
+                    outputFileName = "QuranDatabaseDemo_${formattedDate}_VC${variant.versionCode}_debug.apk"
+                }
+            }
+        }
     }
     namespace 'com.mietrix.quranprojects'
 

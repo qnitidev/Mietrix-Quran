@@ -1,5 +1,7 @@
 package com.mietrix.quranprojects.adapter;
 
+import static android.app.PendingIntent.getActivity;
+
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
@@ -42,6 +44,7 @@ public class AyahWordAdapter extends RecyclerView.Adapter<AyahWordAdapter.AyahVi
   public Context context;
   long surah_id;
   private ArrayList<AyahWord> ayahWordArrayList;
+  SharedPreferences sharedPreferences;
 
   public AyahWordAdapter(ArrayList<AyahWord> ayahWordArrayList, Context context, long surah_id) {
 
@@ -49,7 +52,7 @@ public class AyahWordAdapter extends RecyclerView.Adapter<AyahWordAdapter.AyahVi
     this.context = context;
     this.surah_id = surah_id;
 
-    SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+    sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
     showTranslation =
         sharedPreferences.getBoolean(Config.SHOW_TRANSLATION, Config.defaultShowTranslation);
     wordByWord = sharedPreferences.getBoolean(Config.WORD_BY_WORD, Config.defaultWordByWord);
@@ -130,10 +133,10 @@ public class AyahWordAdapter extends RecyclerView.Adapter<AyahWordAdapter.AyahVi
                         surah_id, word.getVerseId(), word.getWordsId());
                 Log.e(
                     "arabic",
-                    corpus.getArabic1()
-                        + corpus.getArabic2()
-                        + corpus.getArabic3()
-                        + corpus.getArabic4()
+                    corpus.getArabic1()+" , "
+                        + corpus.getArabic2()+" , "
+                        + corpus.getArabic3()+" , "
+                        + corpus.getArabic4()+" , "
                         + corpus.getArabic5());
 
                 final TextView corpus_arabic =
@@ -270,9 +273,9 @@ public class AyahWordAdapter extends RecyclerView.Adapter<AyahWordAdapter.AyahVi
 
   private String fixArabic(String s) {
     // Add sukun on mem | nun
-    s = s.replaceAll("([\u0645\u0646])([ \u0627-\u064A]|$)", "$1\u0652$2");
+    //s = s.replaceAll("([\u0645\u0646])([ \u0627-\u064A]|$)", "$1\u0652$2");
     // Tatweel + Hamza Above (joining chairless hamza) => Yeh With Hamza Above
-    s = s.replaceAll("\u0640\u0654", "\u0626");
+   // s = s.replaceAll("\u0640\u0654", "\u0626");
     return s;
   }
 
@@ -294,6 +297,7 @@ public class AyahWordAdapter extends RecyclerView.Adapter<AyahWordAdapter.AyahVi
       arrayOfChar[position] =
           ((char) Integer.parseInt(arString.substring(position * 4, 4 + position * 4), 16));
     }
+    Log.d("arrayofChar",arrayOfChar.toString());
     return arrayOfChar;
   }
 
@@ -440,7 +444,30 @@ public class AyahWordAdapter extends RecyclerView.Adapter<AyahWordAdapter.AyahVi
 
   public String getCorpusArabicType(long typeId) {
     int typeIdInt = (int) typeId - 1;
-    corpusArabicTypeArray = context.getResources().getStringArray(R.array.corpus_word_type);
+
+
+    String lang;
+    lang = sharedPreferences.getString(Config.LANG, Config.defaultLang);
+
+    switch (lang) {
+      case Config.LANG_BN:
+        corpusArabicTypeArray = context.getResources().getStringArray(R.array.corpus_word_type);
+        break;
+      case Config.LANG_INDO:
+        corpusArabicTypeArray = context.getResources().getStringArray(R.array.corpus_word_type_indo);
+        break;
+      case Config.LANG_MALAY:
+        corpusArabicTypeArray = context.getResources().getStringArray(R.array.corpus_word_type_malay);
+        break;
+      case Config.LANG_EN:
+        corpusArabicTypeArray = context.getResources().getStringArray(R.array.corpus_word_type);
+        break;
+    }
+
+   // corpusArabicTypeArray = context.getResources().getStringArray(R.array.corpus_word_type);
+
+
+
     String corpusArabicType = "";
     try {
       corpusArabicType = corpusArabicTypeArray[typeIdInt];
